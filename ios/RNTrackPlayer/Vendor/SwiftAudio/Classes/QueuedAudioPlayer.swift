@@ -189,5 +189,17 @@ public class QueuedAudioPlayer: AudioPlayer {
             try? self.next()
         }
     }
-    
+
+    func preloadNext() {
+        var index = 0
+        let nextItems = queueManager.nextItems
+
+
+        while nextItems.count > index && !nextItems[index].getSourceUrl().starts(with: "http") {
+           index = index + 1
+        }
+
+        self.preload(item: nextItems[index])
+    }
+
 }

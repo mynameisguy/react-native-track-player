@@ -379,7 +379,14 @@ public class RNTrackPlayer: RCTEventEmitter {
             reject("queue_exhausted", "There is no tracks left to play", nil)
         }
     }
-    
+
+    @objc(preloadNext:rejecter:)
+    public func preloadNext(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        print("Preloading next track")
+        player.preloadNext()
+        resolve(NSNull())
+    }
+
     @objc(skipToPrevious:rejecter:)
     public func skipToPrevious(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         print("Skipping to next track")
