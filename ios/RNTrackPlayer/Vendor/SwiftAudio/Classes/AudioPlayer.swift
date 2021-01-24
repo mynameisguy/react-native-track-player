@@ -180,6 +180,10 @@ public class AudioPlayer: AVPlayerWrapperDelegate {
         self.wrapper.cancelPreload(item: item);
     }
 
+    public func cancelAllPreloads() {
+        self.wrapper.cancelAllPreloads();
+    }
+
     /**
      Toggle playback status.
      */

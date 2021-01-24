@@ -56,4 +56,6 @@ protocol AVPlayerWrapperProtocol: class {
     func preload(item: AudioItem)
 
     func cancelPreload(item: AudioItem)
+
+    func cancelAllPreloads()
 }

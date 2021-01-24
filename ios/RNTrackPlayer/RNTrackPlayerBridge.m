@@ -43,6 +43,9 @@ RCT_EXTERN_METHOD(skipToNext:(RCTPromiseResolveBlock)resolve
 RCT_EXTERN_METHOD(preloadNext:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject);
 
+RCT_EXTERN_METHOD(cancelAllPreloads:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject);
+
 RCT_EXTERN_METHOD(skipToPrevious:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject);
 

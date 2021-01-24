@@ -387,6 +387,13 @@ public class RNTrackPlayer: RCTEventEmitter {
         resolve(NSNull())
     }
 
+    @objc(cancelAllPreloads:rejecter:)
+    public func cancelAllPreloads(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        print("Canceling all the preloads")
+        player.cancelAllPreloads()
+        resolve(NSNull())
+    }
+
     @objc(skipToPrevious:rejecter:)
     public func skipToPrevious(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         print("Skipping to next track")

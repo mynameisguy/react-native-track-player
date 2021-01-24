@@ -79,6 +79,15 @@ class AVPlayerWrapper: AVPlayerWrapperProtocol {
         self.preloadedAssets[url] = nil;
     }
 
+    func cancelAllPreloads() {
+        for urlString in self.preloadedAssets {
+            if (self.preloadedAssets[urlString] != nil){
+                self.preloadedAssets[urlString]?.cancelLoading();
+                self.preloadedAssets[urlString] = nil;
+            }
+        }
+    }
+
      func preload(item: AudioItem) {
         let urlString = item.getSourceUrl();
         let url =  URL(string: urlString);
@@ -224,7 +233,7 @@ class AVPlayerWrapper: AVPlayerWrapperProtocol {
         if currentItem?.status == .failed {
             recreateAVPlayer()
         }
-        
+
         if (self.preloadedAssets[url.absoluteString] != nil){
             self._pendingAsset = self.preloadedAssets[url.absoluteString]
             self.loadAssetIntoPlayer();
