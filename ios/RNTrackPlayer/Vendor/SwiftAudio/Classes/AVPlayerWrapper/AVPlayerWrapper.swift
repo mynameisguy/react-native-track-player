@@ -80,10 +80,10 @@ class AVPlayerWrapper: AVPlayerWrapperProtocol {
     }
 
     func cancelAllPreloads() {
-        for urlString in self.preloadedAssets {
-            if (self.preloadedAssets[urlString] != nil){
-                self.preloadedAssets[urlString]?.cancelLoading();
-                self.preloadedAssets[urlString] = nil;
+        for asset in self.preloadedAssets {
+            if (self.preloadedAssets[asset.key] != nil){
+                self.preloadedAssets[asset.key]?.cancelLoading();
+                self.preloadedAssets[asset.key] = nil;
             }
         }
     }
