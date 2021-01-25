@@ -298,6 +298,15 @@ public class MusicModule extends ReactContextBaseJavaModule implements ServiceCo
     @ReactMethod
     public void skipToNext(final Promise callback) {
         waitForConnection(() -> binder.getPlayback().skipToNext(callback));
+
+    @ReactMethod
+    public void preloadNext(final Promise callback) {
+        callback.resolve(null);
+    }
+
+    @ReactMethod
+    public void cancelAllPreloads(final Promise callback) {
+        callback.resolve(null);
     }
 
     @ReactMethod
