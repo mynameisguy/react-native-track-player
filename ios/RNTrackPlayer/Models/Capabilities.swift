@@ -13,7 +13,7 @@ enum Capability: String {
     
     func mapToPlayerCommand(jumpInterval: NSNumber?,
                             jumpForwardInterval: NSNumber?,
-                            jumpForwardInterval: NSNumber?,
+                            jumpBackwardInterval: NSNumber?,
                             likeOptions: [String: Any]?,
                             dislikeOptions: [String: Any]?,
                             bookmarkOptions: [String: Any]?) -> RemoteCommand {
