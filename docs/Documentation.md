@@ -245,7 +245,9 @@ Some parameters are unused depending on platform.
 | --------- | ---------- | -------------------- | :-----: | :-: | :-----: |
 | options      | `object`   | The options |
 | options.ratingType | [Rating Constant](#rating) | The rating type | ✓ | ✗ | ✗ |
-| options.jumpInterval | `number` | The interval in seconds for the jump forward/backward buttons | ✓ | ✓ | ✓ |
+| options.jumpForwardInterval | `number` | The interval in seconds for the jump forward buttons | ✓ | ✓ | ✓ |
+| options.jumpBackwardInterval | `number` | The interval in seconds for the jump backward buttons | ✓ | ✓ | ✓ |
+| options.jumpInterval | `number` | The default interval in seconds for the jump forward/backward buttons | ✓ | ✓ | ✓ |
 | options.stopWithApp | `boolean` | Whether the player will be destroyed when the app closes | ✓ | ✗ | ✗ |
 | options.alwaysPauseOnInterruption | `boolean` | Whether the `remote-duck` event will be triggered on every interruption | ✓ | ✗ | ✗ |
 | options.capabilities | `array` of [Capability Constants](#capability) | The media controls that will be enabled | ✓ | ✓ | ✓ |

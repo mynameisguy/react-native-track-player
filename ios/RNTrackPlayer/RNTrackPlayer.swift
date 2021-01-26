@@ -286,6 +286,8 @@ public class RNTrackPlayer: RCTEventEmitter {
         
         let remoteCommands = capabilities.map { capability in
             capability.mapToPlayerCommand(jumpInterval: options["jumpInterval"] as? NSNumber,
+                                          jumpForwardInterval: options["jumpForwardInterval"] as? NSNumber,
+                                          jumpBackwardInterval: options["jumpBackwardInterval"] as? NSNumber,
                                           likeOptions: options["likeOptions"] as? [String: Any],
                                           dislikeOptions: options["dislikeOptions"] as? [String: Any],
                                           bookmarkOptions: options["bookmarkOptions"] as? [String: Any])
